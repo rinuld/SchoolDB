@@ -34,7 +34,7 @@
             <div class="bg-white w-full h-screen bg-opacity-75">
 
                 <!-- Section 1 - Welcome! -->
-                <section id="home" class="px-2 py-40">
+                <section id="home" class="px-2 py-48">
                     <div class="items-center max-w-6xl px-8 mx-auto">
                         <div class="flex flex-wrap items-center sm:-mx-3">
 
@@ -85,6 +85,12 @@
                         </div>
                     </div>
                 </section>
+                
+            </div>
+        </div>
+    </body>
+</html>
+    </section>
                 
             </div>
         </div>
