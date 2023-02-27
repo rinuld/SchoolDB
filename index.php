@@ -60,11 +60,19 @@
                 <section class="py-48">
                     <div class="max-w-6xl mx-auto">
                         <div class="flex flex-col items-center">
-                            <h2 class="text-4xl font-bold text-center">Browse the records!</h2>
+                            <h2 class="text-4xl font-extrabold text-center">Browse the records!</h2>
                             <p class="mt-2 text-lg text-center text-gray-600">Check out our database for records below.</p>
-                            <button id="hideTable" class="mt-10 bg-indigo-600 rounded-full hidden" onclick="hideTable()">
-                                <svg width="64px" height="64px" viewBox="-358.4 -358.4 1740.80 1740.80" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"></path></g></svg>
-                            </button>
+                            <div class="flex flex-row items-center">
+                                <a href="views/modules/student_add.php" id="addStudent" class="mt-10 mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 bg-gray-600 rounded-full hidden">
+                                    <svg width="64px" height="64px" viewBox="-8.4 -8.4 40.80 40.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.75 11.25V5C12.75 4.80109 12.671 4.61032 12.5303 4.46967C12.3897 4.32902 12.1989 4.25 12 4.25C11.8011 4.25 11.6103 4.32902 11.4697 4.46967C11.329 4.61032 11.25 4.80109 11.25 5V11.25H5C4.80109 11.25 4.61032 11.329 4.46967 11.4697C4.32902 11.6103 4.25 11.8011 4.25 12C4.25 12.1989 4.32902 12.3897 4.46967 12.5303C4.61032 12.671 4.80109 12.75 5 12.75H11.25V19C11.2526 19.1981 11.3324 19.3874 11.4725 19.5275C11.6126 19.6676 11.8019 19.7474 12 19.75C12.1989 19.75 12.3897 19.671 12.5303 19.5303C12.671 19.3897 12.75 19.1989 12.75 19V12.75H19C19.1989 12.75 19.3897 12.671 19.5303 12.5303C19.671 12.3897 19.75 12.1989 19.75 12C19.7474 11.8019 19.6676 11.6126 19.5275 11.4725C19.3874 11.3324 19.1981 11.2526 19 11.25H12.75Z" fill="#ffffff"></path> </g></svg>
+                                </a>
+                                <a href="views/modules/course_add.php" id="addCourse" class="mt-10 mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 bg-gray-600 rounded-full hidden">
+                                    <svg width="64px" height="64px" viewBox="-8.4 -8.4 40.80 40.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.75 11.25V5C12.75 4.80109 12.671 4.61032 12.5303 4.46967C12.3897 4.32902 12.1989 4.25 12 4.25C11.8011 4.25 11.6103 4.32902 11.4697 4.46967C11.329 4.61032 11.25 4.80109 11.25 5V11.25H5C4.80109 11.25 4.61032 11.329 4.46967 11.4697C4.32902 11.6103 4.25 11.8011 4.25 12C4.25 12.1989 4.32902 12.3897 4.46967 12.5303C4.61032 12.671 4.80109 12.75 5 12.75H11.25V19C11.2526 19.1981 11.3324 19.3874 11.4725 19.5275C11.6126 19.6676 11.8019 19.7474 12 19.75C12.1989 19.75 12.3897 19.671 12.5303 19.5303C12.671 19.3897 12.75 19.1989 12.75 19V12.75H19C19.1989 12.75 19.3897 12.671 19.5303 12.5303C19.671 12.3897 19.75 12.1989 19.75 12C19.7474 11.8019 19.6676 11.6126 19.5275 11.4725C19.3874 11.3324 19.1981 11.2526 19 11.25H12.75Z" fill="#ffffff"></path> </g></svg>
+                                </a>
+                                <button id="hideTable" class="mt-10 mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 bg-gray-600 rounded-full hidden" onclick="hideTable()">
+                                    <svg width="64px" height="64px" viewBox="-358.4 -358.4 1740.80 1740.80" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"></path></g></svg>
+                                </button>
+                            </div>
                         </div>
                         
                         <div class="grid grid-cols-2 gap-8 mt-10 sm:grid-cols-2 lg:grid-cols-2 sm:px-8 xl:px-0 lg:flex">
@@ -74,7 +82,7 @@
                                 </div>
                                 <h4 class="text-xl font-medium my-2 text-white">Student</h4>
                                 <p class="text-center text-white">Records of the students enrolled in our courses.</p>
-                                <div id="studentRecords" class="flex flex-col px-2 py-5 relative hidden">
+                                <div id="studentRecords" class="flex flex-col px-2 py-5 relative hidden text-white">
 
                                     <table id="studentTable" class="min-w-full text-black bg-white border border-slate-300">
 
@@ -125,7 +133,7 @@
                                 </div>
                                 <h4 class="text-xl font-medium my-2 text-white">Course</h4>
                                 <p class="text-center text-white">A list of our available courses.</p>
-                                <div id="courseRecords" class="px-2 py-5 relative hidden">
+                                <div id="courseRecords" class="px-2 py-5 relative hidden text-white">
 
                                     <table id="courseTable" class="min-w-full text-black bg-white border border-slate-300">
 
