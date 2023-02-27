@@ -31,7 +31,7 @@
             <div class="bg-black w-full h-screen bg-opacity-75">
 
                 <!-- Section 1 - Welcome! -->
-                <section class="px-2 py-48">
+                <section class="px-2 py-20 md:py-48">
                     <div class="items-center max-w-6xl px-8 mx-auto">
                         <div class="flex flex-wrap items-center sm:-mx-3">
 
@@ -82,9 +82,9 @@
                                 </div>
                                 <h4 class="text-xl font-medium my-2 text-white">Student</h4>
                                 <p class="text-center text-white">Records of the students enrolled in our courses.</p>
-                                <div id="studentRecords" class="flex flex-col px-2 py-5 relative hidden text-gray-400">
+                                <div id="studentRecords" class="px-2 py-5 relative hidden text-gray-400">
 
-                                    <table id="studentTable" class="min-w-full text-black bg-white border border-slate-300">
+                                    <table id="studentTable" class="min-w-full stripe text-black bg-white border border-slate-300">
 
                                         <thead>
                                             <tr class="border border-grey-500 text-center text-white">
@@ -122,8 +122,8 @@
                                                 }
                                             ?>
                                         </tbody>
+                                        
                                     </table>
-
                                 </div>
                             </button>
 
@@ -133,9 +133,9 @@
                                 </div>
                                 <h4 class="text-xl font-medium my-2 text-white">Course</h4>
                                 <p class="text-center text-white">A list of our available courses.</p>
-                                <div id="courseRecords" class="px-2 py-5 relative hidden text-white">
+                                <div id="courseRecords" class="px-2 py-5 relative hidden text-gray-400">
 
-                                    <table id="courseTable" class="min-w-full text-black bg-white border border-slate-300">
+                                    <table id="courseTable" class="min-w-full stripe text-black bg-white border border-slate-300">
 
                                         <thead>
                                             <tr class="border border-grey-500 text-center text-white">
