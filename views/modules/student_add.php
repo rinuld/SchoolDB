@@ -16,7 +16,7 @@
 	</style>
     
     <body>
-        <div id="main" class="bg-no-repeat bg-left w-full h-screen bg-fixed bg-cover" style="background-image: url('../assets/images/college.jpg');">
+        <div id="main" class="bg-no-repeat bg-left w-full h-full bg-fixed bg-cover" style="background-image: url('../assets/images/college.jpg');">
             <!-- Navbar -->
             <nav class="fixed flex flex-col items-center justify-center py-5 w-full md:flex-row px-4 shadow-lg z-40 bg-indigo-600">
                 <a href="../../index.php" class="flex items-center font-medium text-gray-900 lg:w-auto md:mb-0">
@@ -25,7 +25,7 @@
             </nav>
             
             <!-- Black overlay -->
-            <div class="bg-black bg-opacity-75 h-screen">
+            <div class="bg-black bg-opacity-75 h-full md:h-screen">
                 <div class="flex flex-col items-center">
                     <form class="w-full max-w-lg my-40 pt-5" role="form" id="student-form" method="POST">
                         <div class="flex flex-wrap -mx-3 mb-6">
