@@ -6,5 +6,9 @@
             $answer = (new mdlStudent)->mdlShowStudents();
             return $answer;
         }
+
+        static public function ctrAddStudent($data){
+            $answer = (new mdlStudent)->mdlAddStudent($data);
+        }
     }
 ?>

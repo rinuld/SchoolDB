@@ -1,63 +1,50 @@
 <?php
-require_once "../controllers/student_controller.php";
-require_once "../models/student_model.php";
+require_once "/xampp/htdocs/SchoolDB/models/student_model.php";
+require_once "/xampp/htdocs/SchoolDB/controllers/student_controller.php";
 
 class addStudent{
-  public $trans_type; 
 
-  public $cname;
-  public $isactive;
-  public $clientid;
+  public $lname;
+  public $fname;
+  public $mi;
   public $address;
-  public $phone;
-  public $mobile;
-  public $email;
-  public $website;
-  public $cperson;
+  public $coursecode;
+  public $bdate;
+  public $age;
+  public $gender;
 
   public function addStudentRecord(){
-    $trans_type = $this->trans_type;
 
-  	$cname = $this->cname;
-  	$isactive = $this->isactive;
-  	$clientid = $this->clientid;
+  	$lname = $this->lname;
+  	$fname = $this->fname;
+  	$mi = $this->mi;
     $address = $this->address;
-  	$phone = $this->phone;
-  	$mobile = $this->mobile;
-  	$email = $this->email;
-    $website = $this->website;
-    $cperson = $this->cperson;
+  	$coursecode = $this->coursecode;
+  	$bdate = $this->bdate;
+  	$age = $this->age;
+    $gender = $this->gender;
 
-    $data = array("cname"=>$cname,
-    	            "isactive"=>$isactive,
-                  "clientid"=>$clientid,
+    $data = array("lname"=>$lname,
+    	            "fname"=>$fname,
+                  "mi"=>$mi,
                   "address"=>$address,
-                  "phone"=>$phone,
-                  "mobile"=>$mobile,
-                  "email"=>$email,
-                  "website"=>$website,
-                  "cperson"=>$cperson);
+                  "coursecode"=>$coursecode,
+                  "bdate"=>$bdate,
+                  "age"=>$age,
+                  "gender"=>$gender);
 
-    if ($trans_type == 'New'){
-      $answer = (new ControllerClient)->ctrAddClient($data);
-    }else{
-      $answer = (new ControllerClient)->ctrEditClient($data);
-    }
-
+    $answer = (new ctrStudent)->ctrAddStudent($data);
   }
 }
 
-$save_client = new addStudent();
-$save_client -> trans_type = $_POST["trans_type"];
+$student = new addStudent();
+$student -> lname = $_POST["lname"];
+$student -> fname = $_POST["fname"];
+$student -> mi = $_POST["mi"];
+$student -> address = $_POST["address"];
+$student -> coursecode = $_POST["coursecode"];
+$student -> bdate = $_POST["bdate"];
+$student -> age = $_POST["age"];
+$student -> gender = $_POST["gender"];
 
-$save_client -> cname = $_POST["cname"];
-$save_client -> isactive = $_POST["isactive"];
-$save_client -> clientid = $_POST["clientid"];
-$save_client -> address = $_POST["address"];
-$save_client -> phone = $_POST["phone"];
-$save_client -> mobile = $_POST["mobile"];
-$save_client -> email = $_POST["email"];
-$save_client -> website = $_POST["website"];
-$save_client -> cperson = $_POST["cperson"];
-
-$save_client -> addStudentRecord();
+$student -> addStudentRecord();
