@@ -21,7 +21,7 @@
         <div id="main" class="bg-no-repeat bg-left w-full h-screen bg-fixed bg-cover" style="background-image: url('views/assets/images/college.jpg');">
             
             <!-- Navbar -->
-            <nav class="fixed flex flex-col items-center justify-center py-5 w-full md:flex-row px-4 shadow-lg z-40 bg-indigo-600">
+            <nav class="fixed py-5 w-full px-4 shadow-lg z-40 bg-indigo-600">
                 <a href="#main" class="flex items-center font-medium text-gray-900 lg:w-auto md:mb-0">
                     <span class="mx-auto text-2xl font-bold text-white hover:text-indigo-100">SchoolDB</span>
                 </a>
@@ -31,7 +31,7 @@
             <div class="bg-black w-full h-screen bg-opacity-75">
 
                 <!-- Section 1 - Welcome! -->
-                <section class="px-2 py-20 md:py-48">
+                <section class="px-5 py-24 md:py-48">
                     <div class="items-center max-w-6xl px-8 mx-auto">
                         <div class="flex flex-wrap items-center sm:-mx-3">
 
@@ -46,7 +46,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2">
+                            <div class="w-full sm:w-3/4 md:w-1/2">
                                 <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
                                     <img src="https://cdn.devdojo.com/images/november2020/hero-image.jpeg">
                                 </div>
