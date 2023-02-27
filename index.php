@@ -82,7 +82,7 @@
                                 </div>
                                 <h4 class="text-xl font-medium my-2 text-white">Student</h4>
                                 <p class="text-center text-white">Records of the students enrolled in our courses.</p>
-                                <div id="studentRecords" class="flex flex-col px-2 py-5 relative hidden text-white">
+                                <div id="studentRecords" class="flex flex-col px-2 py-5 relative hidden text-gray-400">
 
                                     <table id="studentTable" class="min-w-full text-black bg-white border border-slate-300">
 
@@ -140,35 +140,29 @@
                                         <thead>
                                             <tr class="border border-grey-500 text-center text-white">
                                                 <th class="bg-gray-600 p-2 font-bold">ID</th>
-                                                <th class="bg-gray-600 p-2 font-bold">Last Name</th>
-                                                <th class="bg-gray-600 p-2 font-bold">First Name</th>
-                                                <th class="bg-gray-600 p-2 font-bold">Middle Initial</th>
-                                                <th class="bg-gray-600 p-2 font-bold">Address</th>
                                                 <th class="bg-gray-600 p-2 font-bold">Course Code</th>
-                                                <th class="bg-gray-600 p-2 font-bold">Birthdate</th>
-                                                <th class="bg-gray-600 p-2 font-bold">Age</th>
-                                                <th class="bg-gray-600 p-2 font-bold">Gender</th>
+                                                <th class="bg-gray-600 p-2 font-bold">Course Title</th>
+                                                <th class="bg-gray-600 p-2 font-bold">Credit Units</th>
+                                                <th class="bg-gray-600 p-2 font-bold">Type</th>
+                                                <th class="bg-gray-600 p-2 font-bold">Room</th>
                                             </tr>
                                         </thead>
                                     
                                         <tbody>
                                             <?php
                                                 require_once '/xampp/htdocs/SchoolDB/models/connection.php';
-                                                require_once '/xampp/htdocs/SchoolDB/controllers/student_controller.php';
+                                                require_once '/xampp/htdocs/SchoolDB/controllers/course_controller.php';
 
-                                                $student = (new ctrStudent)->ctrShowStudents();
+                                                $course = (new ctrCourse)->ctrShowCourses();
                                                 
-                                                foreach ($student as $key => $value){
+                                                foreach ($course as $key => $value){
                                                     echo '<tr class="bg-gray-300 border border-grey-500 text-center">
                                                     <td class="p-2">'.$value["id"].'</td>
-                                                    <td class="p-2">'.$value["lname"].'</td>
-                                                    <td class="p-2">'.$value["fname"].'</td>  
-                                                    <td class="p-2">'.$value["mi"].'</td>
-                                                    <td class="p-2">'.$value["address"].'</td>
                                                     <td class="p-2">'.$value["coursecode"].'</td>
-                                                    <td class="p-2">'.$value["bdate"].'</td>
-                                                    <td class="p-2">'.$value["age"].'</td>
-                                                    <td class="p-2">'.$value["gender"].'</td>
+                                                    <td class="p-2">'.$value["title"].'</td>  
+                                                    <td class="p-2">'.$value["credunits"].'</td>
+                                                    <td class="p-2">'.$value["type"].'</td>
+                                                    <td class="p-2">'.$value["room"].'</td>
                                                     </tr>';
                                                 }
                                             ?>

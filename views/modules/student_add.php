@@ -30,33 +30,33 @@
                     <form class="w-full max-w-lg my-40 pt-5" role="form" id="student-form" method="POST">
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-first-name">
+                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                     Last Name
                                 </label>
-                                <input type="text" id="lname" name="lname" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" autocomplete="off" required>
+                                <input type="text" id="lname" name="lname" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" autocomplete=off required>
                             </div>
                             <div class="w-full md:w-1/2 px-3">
-                            <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-last-name">
+                            <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                 First Name
                             </label>
-                            <input type="text" id="fname" name="fname" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" autocomplete=offrequired>
+                            <input type="text" id="fname" name="fname" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" autocomplete=off required>
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-city">
+                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                     Middle Initial
                                 </label>
                                 <input type="text" id="mi" name="mi" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" autocomplete=off required>
                             </div>
                             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-city">
+                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                     Address
                                 </label>
                                 <input type="text" id="address" name="address" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" autocomplete=off required>
                             </div>
                             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-zip">
+                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                     Course Code
                                 </label>
                                 <input type="text" id="coursecode" name="coursecode" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" autocomplete=off required>
@@ -64,19 +64,19 @@
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-2">
                             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-city">
+                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                     Birthdate
                                 </label>
                                 <input type="date" id="bdate" name="bdate" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" autocomplete=off required>
                             </div>
                             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-city">
+                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                     Age
                                 </label>
                                 <input type="int" id="age" name="age" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" autocomplete=off required>
                             </div>
                             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2" for="grid-zip">
+                                <label class="text-white block uppercase tracking-wide text-xs font-bold mb-2">
                                     Gender
                                 </label>
                                 <input type="text" id="gender" name="gender" class="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" autocomplete=off required>
