@@ -5,6 +5,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="views/assets/css/tailwind.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="views/js/script.js"></script>
 	</head>
 
@@ -56,19 +59,24 @@
                 <!-- Section 2 - Database Records -->
                 <section class="py-48">
                     <div class="max-w-6xl mx-auto">
-                        <h2 class="text-4xl font-bold text-center">Browse the records!</h2>
-                        <p class="mt-2 text-lg text-center text-gray-600">Check out our database for records below.</p>
+                        <div class="flex flex-col items-center">
+                            <h2 class="text-4xl font-bold text-center">Browse the records!</h2>
+                            <p class="mt-2 text-lg text-center text-gray-600">Check out our database for records below.</p>
+                            <button id="hideTable" class="mt-10 bg-indigo-600 rounded-full hidden" onclick="hideTable()">
+                                <svg width="64px" height="64px" viewBox="-358.4 -358.4 1740.80 1740.80" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"></path></g></svg>
+                            </button>
+                        </div>
+                        
                         <div class="grid grid-cols-2 gap-8 mt-10 sm:grid-cols-2 lg:grid-cols-2 sm:px-8 xl:px-0 lg:flex">
-
                             <button id="table1" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 flex flex-col items-center col-span-4 px-8 py-12 bg-gray-600 rounded-md md:w-full" onclick="showStudent()">
                                 <div class="p-1 bg-indigo-600 rounded-full">
                                     <svg width="64px" height="64px" viewBox="-22.4 -22.4 108.80 108.80" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#ffffff" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M48.61,56.07A16.61,16.61,0,0,0,32,39.45h0A16.61,16.61,0,0,0,15.39,56.07Z"></path><path d="M39.41,28a8.11,8.11,0,0,1-8.25,8.1,8.28,8.28,0,0,1-7.95-8.37V16.45a.06.06,0,0,1,.05-.06,60.56,60.56,0,0,1,8.27-.68,54.93,54.93,0,0,1,7.91.68.06.06,0,0,1,.06.06Z"></path><path d="M23.21,20.14l-8.27-3.8a.08.08,0,0,1,0-.13L31.32,8.39h.06l16.33,7.74a.07.07,0,0,1,0,.12L39.5,20.14"></path><path d="M23.21,24.35H20.89s-2,0-2,3.1c0,2.86,2,2.86,2,2.86l2.72,0"></path><path d="M39.41,24.71h2.32s2,0,2,3.09c0,2.86-2,2.86-2,2.86H39"></path><line x1="46.85" y1="33.15" x2="46.85" y2="16.72"></line><circle cx="46.85" cy="35.28" r="2.13"></circle><path d="M39.5,23a42.89,42.89,0,0,0-7.95-.69,40.85,40.85,0,0,0-8.34.69"></path></g></svg>
                                 </div>
                                 <h4 class="text-xl font-medium my-2 text-white">Student</h4>
                                 <p class="text-center text-white">Records of the students enrolled in our courses.</p>
-                                <div id="studentRecords" class="px-2 py-5 relative hidden">
+                                <div id="studentRecords" class="flex flex-col px-2 py-5 relative hidden">
 
-                                    <table class="min-w-full">
+                                    <table id="studentTable" class="min-w-full text-black bg-white border border-slate-300">
 
                                         <thead>
                                             <tr class="border border-grey-500 text-center text-white">
@@ -119,7 +127,7 @@
                                 <p class="text-center text-white">A list of our available courses.</p>
                                 <div id="courseRecords" class="px-2 py-5 relative hidden">
 
-                                    <table class="min-w-full">
+                                    <table id="courseTable" class="min-w-full text-black bg-white border border-slate-300">
 
                                         <thead>
                                             <tr class="border border-grey-500 text-center text-white">
